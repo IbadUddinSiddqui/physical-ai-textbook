@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1a73e8"/>
+
+  <!-- Title -->
+  <text x="600" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="white" font-weight="bold">
+    Physical AI &amp; Humanoid Robotics
+  </text>
+
+  <text x="600" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="white">
+    A comprehensive guide to embodied intelligence
+  </text>
+
+  <!-- Robot illustration -->
+  <g transform="translate(600, 380)">
+    <!-- Robot head -->
+    <rect x="-60" y="-80" width="120" height="100" rx="10" fill="#ff6b35"/>
+
+    <!-- Eyes -->
+    <circle cx="-25" cy="-50" r="8" fill="white"/>
+    <circle cx="25" cy="-50" r="8" fill="white"/>
+
+    <!-- Mouth -->
+    <path d="M-20 -25 Q0 -10 20 -25" stroke="white" stroke-width="3" fill="none"/>
+
+    <!-- Body -->
+    <rect x="-45" y="20" width="90" height="80" rx="8" fill="#ff6b35"/>
+
+    <!-- Arms -->
+    <rect x="-90" y="35" width="45" height="15" rx="5" fill="#ff6b35"/>
+    <rect x="45" y="35" width="45" height="15" rx="5" fill="#ff6b35"/>
+
+    <!-- Circuit patterns -->
+    <path d="M-40 -65 L40 -65 M-40 -50 L40 -50 M-40 -35 L40 -35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="white">
+    Created by Ibad Uddin | Open Source Textbook
+  </text>
+</svg>

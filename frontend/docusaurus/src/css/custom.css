@@ -1,0 +1,370 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Enhanced color scheme for Physical AI & Humanoid Robotics Textbook */
+:root {
+  --ifm-color-primary: #1a73e8; /* Google blue */
+  --ifm-color-primary-dark: #1865cc;
+  --ifm-color-primary-darker: #1658b0;
+  --ifm-color-primary-darkest: #124894;
+  --ifm-color-primary-light: #3b8cff;
+  --ifm-color-primary-lighter: #5a9eff;
+  --ifm-color-primary-lightest: #7ab4ff;
+
+  --ifm-color-secondary: #6c757d;
+  --ifm-color-success: #28a745;
+  --ifm-color-info: #17a2b8;
+  --ifm-color-warning: #ffc107;
+  --ifm-color-danger: #dc3545;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8f9fa;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom colors for textbook */
+  --textbook-accent: #ff6b35; /* Orange accent for robotics */
+  --textbook-section-bg: #f0f8ff; /* Light blue background for sections */
+  --textbook-border: #e0e0e0; /* Subtle border color */
+}
+
+/* Dark mode enhancements */
+[data-theme='dark'] {
+  --ifm-color-primary: #4285f4; /* Lighter blue for dark mode */
+  --ifm-color-primary-dark: #5a96f6;
+  --ifm-color-primary-darker: #6da4f7;
+  --ifm-color-primary-darkest: #80b2f8;
+  --ifm-color-primary-light: #2a6dc2;
+  --ifm-color-primary-lighter: #1f57a4;
+  --ifm-color-primary-lightest: #144186;
+
+  --ifm-background-color: #121212;
+  --ifm-background-surface-color: #1e1e1e;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  --textbook-section-bg: #1a1a2e; /* Dark blue background for sections */
+  --textbook-border: #333333; /* Darker border color */
+}
+
+/* Enhanced typography */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* Enhanced navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Enhanced sidebar */
+.menu {
+  font-size: 0.9rem;
+}
+
+.menu__list-item-collapsible .menu__link--sublist {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Enhanced headers */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--textbook-border);
+  color: var(--ifm-color-primary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Enhanced content containers */
+.markdown {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.markdown a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+.markdown a:hover {
+  border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+/* Enhanced blockquotes */
+.alert {
+  border-left-width: 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+.alert--info {
+  border-left-color: var(--ifm-color-info);
+}
+
+.alert--warning {
+  border-left-color: var(--ifm-color-warning);
+}
+
+.alert--success {
+  border-left-color: var(--ifm-color-success);
+}
+
+.alert--danger {
+  border-left-color: var(--ifm-color-danger);
+}
+
+/* Enhanced code blocks */
+.prism-code {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+/* Enhanced tables */
+.markdown table {
+  display: table;
+  table-layout: auto;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 1px solid var(--textbook-border);
+  padding: 0.75rem;
+}
+
+.markdown table th {
+  background-color: var(--ifm-table-border-color);
+  font-weight: 600;
+}
+
+/* Enhanced buttons */
+.button {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Custom section styling */
+.textbook-section {
+  background-color: var(--textbook-section-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.textbook-highlight {
+  background: linear-gradient(120deg, var(--textbook-accent) 0%, var(--ifm-color-primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.textbook-highlight:hover {
+  background-size: 100% 88%;
+}
+
+/* Enhanced footer */
+.footer {
+  background-color: var(--ifm-background-surface-color);
+  padding: 3rem 0 2rem;
+}
+
+.footer__title {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer__link-item {
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Custom author credit */
+.author-credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid var(--textbook-border);
+  font-style: italic;
+  color: var(--ifm-color-secondary);
+}
+
+/* Custom classes for the textbook */
+.logo-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary) !important;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.subtitle-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-secondary) !important;
+  margin: 0;
+}
+
+/* Centered container */
+.textbook-section {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Additional custom classes for layout */
+.key-concept-spaced {
+  margin-bottom: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid-item {
+  background: var(--ifm-background-color);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+.centered-highlighted-section {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-radius: 8px;
+}
+
+.highlighted-title {
+  margin-bottom: 1rem;
+  color: white !important;
+}
+
+.highlighted-text {
+  margin-bottom: 1.5rem;
+  color: rgba(255,255,255,0.9) !important;
+}
+
+.highlighted-button {
+  color: white !important;
+  border-color: white !important;
+}
+
+/* Component grid for key components */
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.component-item {
+  background: var(--ifm-background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--textbook-accent);
+}
+
+/* Enhanced sidebar navigation */
+.theme-doc-sidebar-menu .menu__list-item .menu__link {
+  border-radius: 6px;
+  margin-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.theme-doc-sidebar-menu .menu__list-item .menu__link:hover {
+  background-color: rgba(26, 115, 232, 0.1);
+  transform: translateX(4px);
+}
+
+/* Enhanced card-like containers for key concepts */
+.key-concept {
+  background: var(--ifm-background-surface-color);
+  border-left: 4px solid var(--textbook-accent);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.key-concept h4 {
+  margin-top: 0;
+  color: var(--textbook-accent);
+  font-size: 1.2rem;
+}
+
+/* Responsive design improvements */
+@media (max-width: 996px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .navbar {
+    padding: 0.7rem 1rem;
+  }
+
+  .textbook-section {
+    padding: 1.5rem;
+  }
+}
