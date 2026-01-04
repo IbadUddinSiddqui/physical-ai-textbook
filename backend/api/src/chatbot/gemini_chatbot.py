@@ -17,7 +17,7 @@ class GeminiChatConfig:
         # Hardcoded API keys and model name - NO environment variable loading
         self.model_name = "gemini-2.5-flash"  # Using hardcoded model
         # Set your actual API keys directly
-        self.api_key = "AIzaSyBVOhQruC5HuaRO4zZNe_wLSWZRH1horKo"  # Your actual Gemini API key
+        self.api_key = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")  # Use environment variable
         self.openai_api_key = "YOUR_OPENAI_API_KEY_HERE"  # Replace with your actual OpenAI API key
 
         # Hardcoded API keys - no environment variable loading

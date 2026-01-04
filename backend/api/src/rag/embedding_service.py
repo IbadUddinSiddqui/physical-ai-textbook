@@ -16,8 +16,8 @@ class EmbeddingConfig:
     def __init__(self):
         self.model = os.getenv("EMBEDDING_MODEL", "text-embedding-004")  # Using OpenAI model as default
         self.api_key = os.getenv("OPENAI_API_KEY")
-        # Hardcode your actual API key directly
-        self.google_api_key = "AIzaSyBVOhQruC5HuaRO4zZNe_wLSWZRH1horKo"  # Your actual API key
+        # Use environment variable for API key
+        self.google_api_key = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")  # Use environment variable
 
         # Debug logging for embedding API key loading
         logger.info(f"Debug: EMBEDDING_MODEL environment variable: {os.getenv('EMBEDDING_MODEL')}")
